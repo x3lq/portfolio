@@ -1,0 +1,11 @@
+query getLastLandingpage {
+    landingPages(limit: 1, sort:"created_at:desc") {
+        hero {
+            Title,
+            Description,
+            BackgroundImage {
+                url
+            }
+        }
+    }
+}
