@@ -60,8 +60,9 @@ export default {
     ** Axios module configuration
     ** See https://axios.nuxtjs.org/options
     */
-    axios: {
-        baseURL: 'http://localhost:1337/'
+    env: {
+        baseURL: process.env.baseURL || 'http://localhost:1337',
+        baseGQLPath: process.env.baseGQLPath || 'http://localhost:1337/graphql'
     },
     /*
     ** Build configuration
@@ -76,7 +77,7 @@ export default {
     apollo: {
         clientConfigs: {
             default: {
-                httpEndpoint: 'http://localhost:1337/graphql',
+                httpEndpoint: process.env.baseGQLPath || 'http://localhost:1337/graphql',
                 cors: {
                     origin: '*',
                     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',

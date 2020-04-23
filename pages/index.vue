@@ -40,6 +40,7 @@
         height: 100%
         width: 100%
         font-family: 'BenchNine', sans-serif
+        background-color: black
 
     .app-container
         height: 100%
@@ -49,7 +50,6 @@
 
     .app-content
         min-height: 100vh
-        padding: 24px
         display: grid
         align-items: center
         justify-items: center
